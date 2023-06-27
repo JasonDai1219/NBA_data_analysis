@@ -1,10 +1,10 @@
 # NBA_data_analysis
-** this project mainly focues on making a basic model to predict NBA players' `Salaries` using their stats and experiences.**
+**this project mainly focues on making a basic model to predict NBA players' `Salaries` using their stats and experiences.**
 
 ## Web Scraping of NBA players' salaries data.
 - specific details are in this jupyter notebook : https://github.com/JasonDai1219/NBA_data_analysis/blob/main/NBA%20Data%20Web%20Scraping.ipynb
 
-** Introduction on datasets
+## Introduction on datasets
 - `players_stats` : this dataframe contains information of each player's performance `on court` from the season 2012-13 to now.
 - `salaries` : this dataframe contains information of each player's salary from the season 2012-13 to now.
 
@@ -26,6 +26,6 @@ add heads of datasets later on.
 
 ## Model creation
 - **Getting rid of unuseful variables** : we need to drop all IDs, since they are not relevant in our analysis, and could bring potential noise to the model. We are also dropping all attempted counts and made counts on shootings, as the percentage variable is a good enough representation of those two variable; the same reason applies to REB and OREb, DREB, and EFF. Therefore, we want to avoid `Multicolinearity` through dropping REB variable also.
-- ** Best Hyperparameter ** : After using `cross validation`, we realized that degree x is the most optimal degree to use in our model.
-- ** Overall Model ** : 
-- ** Model performance ** : 
+- **Best Hyperparameter** : After using `cross validation`, we realized that degree x is the most optimal degree to use in our model.
+- **Overall Model** : 
+- **Model performance** : 
