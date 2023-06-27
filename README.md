@@ -25,6 +25,7 @@ add heads of datasets later on.
 - We can tell that the `Salary` of NBA players has a roughly linear relationship with other numerical variables, thus, we would use `Linear Regression`. However, it is important to verify that degree 1 polynomial regression(Linear Regression) is indeed the best choice, so we would perform a `cross-validation` to see which degree works the best for us.
 
 ## Model creation
+- Getting rid of unuseful variables: we need to drop all IDs, since they are not relevant in our analysis, and could bring potential noise to the model. We are also dropping all attempted counts and made counts on shootings, as the percentage variable is a good enough representation of those two variable; the same reason applies to REB and OREb, DREB, and EFF. Therefore, we want to avoid `Multicolinearity` through dropping REB variable also.
 - Best Hyperparameter: After using `cross validation`, we realized that degree x is the most optimal degree to use in our model.
 - Overall Model: 
 - Model performance: 
