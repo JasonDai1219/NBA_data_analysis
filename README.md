@@ -25,5 +25,6 @@ add heads of datasets later on.
 - We can tell that the `Salary` of NBA players has a roughly linear relationship with other numerical variables, thus, we would use `Linear Regression`. However, it is important to verify that degree 1 polynomial regression(Linear Regression) is indeed the best choice, so we would perform a `cross-validation` to see which degree works the best for us.
 
 ## Model creation
-- After using `cross validation`, we realized that degree x is the most optimal degree to use in our model.
-
+- Best Hyperparameter: After using `cross validation`, we realized that degree x is the most optimal degree to use in our model.
+- Overall Model: 
+- Model performance: 
