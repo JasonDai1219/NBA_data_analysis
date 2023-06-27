@@ -3,9 +3,20 @@
 
 ## Web Scraping of NBA players' salaries data.
 - specific details are in this jupyter notebook : https://github.com/JasonDai1219/NBA_data_analysis/blob/main/NBA%20Data%20Web%20Scraping.ipynb
-- As we do not have missing data in these datasets, so we do not need to work on data cleaning part that much, and we only need to make the salary variable in string format.
 
 ## Data Exploration
+- we merge together the `players_stats` and `salaries` data frames together to let each player gets their corresponding salary in each season.
+- As we do not have missing data in these datasets, so we do not need to work on data cleaning part that much, and we only need to make the salary variable in string format through `merged['Salary'] = merged['Salary'].str.strip('$').str.replace(',', '').astype('float')`.
+- To also adjust the problem of inflation, we searched about the `cumulative inflation rate` from each season in our dataset to now, and adjusted each player's salaries accordingly. 
+    > cumulative_inflation_rate = pd.Series([1.3246, 1.3055, 1.2498, 1.2254, 1.2132, 1.1914, 1.1665, 1.1900, 1.1645, 1.1147, 1.0615])
+    inflation = pd.concat([pd.DataFrame(cumulative_inflation_rate), 
+           pd.DataFrame(['2012-13', '2013-14', '2014-15', '2015-16', '2016-17', '2017-18', '2018-19', '2019-20', '2020-21', '2021-22', '2022-23'])], 
+          axis = 1)
+    inflation.columns = ['inflation', 'Year']
+    inflation = inflation.set_index('Year')
+    temp_inflated = merged.merge(inflation, left_on = 'Year', right_index = True, how = 'inner')
+    temp_inflated['Salary'] = temp_inflated['Salary'] * temp_inflated['inflation']
+    merged_inflated = temp_inflated.drop(columns = ['inflation'], axis = 1)
 
 add dataframes and graphs later on.
 
