@@ -4,6 +4,10 @@
 ## Web Scraping of NBA players' salaries data.
 - specific details are in this jupyter notebook : https://github.com/JasonDai1219/NBA_data_analysis/blob/main/NBA%20Data%20Web%20Scraping.ipynb
 
+** Introduction on datasets
+- `players_stats` : this dataframe contains information of each player's performance `on court` from the season 2012-13 to now.
+- `salaries` : this dataframe contains information of each player's salary from the season 2012-13 to now.
+
 ## Data Exploration
 - we merge together the `players_stats` and `salaries` data frames together to let each player gets their corresponding salary in each season.
 - As we do not have missing data in these datasets, so we do not need to work on data cleaning part that much, and we only need to make the salary variable in string format through `merged['Salary'] = merged['Salary'].str.strip('$').str.replace(',', '').astype('float')`.
