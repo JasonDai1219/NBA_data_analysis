@@ -17,8 +17,13 @@ add dataframes and graphs later on.
 
 ## Feature Engineering
 
-People may think that if a player has ever played in a city that has huge market and fans, won an MVP award, or played in the national team in Olympics, then the player will be more likely to gain higher salary. Thus we added these features in our original dataframe.
+- People may think that if a player has ever played in a city that has huge market and fans, won an MVP award, or played in the national team in Olympics, then the player will be more likely to gain higher salary. Thus we added these features in our original dataframe.
 add heads of datasets later on.
+- - As we could also see that due to the shift in coaches' tactics, which focuses on three pointer shooting in later seasons, we should perform a within group transformation to standardize each player's `on-court` performance within each season to have a better interpretability.
 
 ## Justification on model selection
 - We can tell that the `Salary` of NBA players has a roughly linear relationship with other numerical variables, thus, we would use `Linear Regression`. However, it is important to verify that degree 1 polynomial regression(Linear Regression) is indeed the best choice, so we would perform a `cross-validation` to see which degree works the best for us.
+
+## Model creation
+- After using `cross validation`, we realized that degree x is the most optimal degree to use in our model.
+
