@@ -30,8 +30,15 @@
 - As we do not have missing data in these datasets, so we do not need to work on data cleaning part that much, and we only need to make the salary variable in string format through `merged['Salary'] = merged['Salary'].str.strip('$').str.replace(',', '').astype('float')`.
 - To also adjust the problem of inflation, we searched about the `cumulative inflation rate` from each season in our dataset to now, and adjusted each player's salaries accordingly.
 - After all, we take the mean of all players' data across all these seasons to make the result more informativr, and the result could potentially `tell a NBA player how much income he is going to make each season approximately`.
+- This is a preview of the dataframe:
 
-add dataframes and graphs later on.
+|      Salary |      RANK |         GP |       MIN |     FG_PCT |   FG3_PCT |      FT_PCT |      OREB |      DREB |        AST |       STL |       BLK |       TOV |       PTS |   Played_In_Popular_Teams |   Won_MVP_award |   Played_Olympics |
+|------------:|----------:|-----------:|----------:|-----------:|----------:|------------:|----------:|----------:|-----------:|----------:|----------:|----------:|----------:|--------------------------:|----------------:|------------------:|
+| 3.75363e+06 |  0.91352  |  0.814933  | -0.770675 | -0.0784768 | 0.531369  |  0.82034    | -0.698194 | -0.987298 | -0.790909  | -0.413947 | -0.626728 | -0.874567 | -0.478262 |                  0        |               0 |                 0 |
+| 2.109e+06   |  0.663017 |  0.0327515 | -1.17287  | -0.762889  | 0.306974  | -0.00700681 | -0.792046 | -1.18323  | -0.0219887 | -0.742556 | -0.705457 | -0.20952  | -0.650934 |                  0.666667 |               0 |                 0 |
+| 1.83906e+07 | -0.567837 |  0.0227076 |  0.711519 |  0.155929  | 0.105393  | -0.501267   |  1.24518  |  0.425028 |  0.114553  | -0.145064 |  0.294035 |  0.159685 |  0.313308 |                  0        |               0 |                 0 |
+| 2.81524e+06 |  0.942883 | -0.0251501 | -1.19507  | -0.213087  | 0.71094   | -0.527344   | -0.892658 | -1.27417  | -0.31163   | -0.324725 | -0.81229  | -0.572335 | -0.861853 |                  0        |               0 |                 0 |
+| 4.03282e+06 |  0.458696 | -0.288776  | -0.695583 | -1.21522   | 0.0399091 |  0.944083   | -0.53713  | -0.502908 | -0.856242  | -0.640677 | -0.336529 | -0.725937 | -0.762757 |                  0.5      |               0 |                 0 |
 
 ## Feature Engineering
 
