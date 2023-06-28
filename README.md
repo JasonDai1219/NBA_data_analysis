@@ -47,6 +47,19 @@ add heads of datasets later on.
 - - As we could also see that due to the shift in coaches' tactics, which focuses on three pointer shooting in later seasons, we should perform a within group transformation to standardize each player's `on-court` performance within each season to have a better interpretability.
 
 ## Justification on model selection
+Here are some graphs representing some variables' relationships with `Salary`:
+1. PTS(points) vs. Salary:
+
+<iframe src="assets/PTS_vs_Salary.html" width=800 height=600 frameBorder=0></iframe>
+
+2. REB(rebounds) vs. Salary:
+
+<iframe src="assets/REB_vs_Salary.html" width=800 height=600 frameBorder=0></iframe>
+
+3. AST(assists) vs. Salary:
+
+<iframe src="assets/AST_vs_Salary.html" width=800 height=600 frameBorder=0></iframe>
+
 - We can tell that the `Salary` of NBA players has a roughly linear relationship with other numerical variables, thus, we would use `Linear Regression`. However, it is important to verify that degree 1 polynomial regression(Linear Regression) is indeed the best choice, so we would perform a `cross-validation` to see which degree works the best for us.
 
 ## Model creation
