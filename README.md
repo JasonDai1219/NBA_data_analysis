@@ -5,8 +5,25 @@
 - specific details are in this jupyter notebook : https://github.com/JasonDai1219/NBA_data_analysis/blob/main/NBA%20Data%20Web%20Scraping.ipynb
 
 ## Introduction on datasets
-- `players_stats` : this dataframe contains information of each player's performance `on court` from the season 2012-13 to now.
-- `salaries` : this dataframe contains information of each player's salary from the season 2012-13 to now.
+- `players_stats` : this dataframe contains information of each player's performance `on court` from the season 2012-13 to now. This is a preview of the dataframe:
+
+| Year    | Season_Type      |   PLAYER_ID |   RANK | PLAYER          |    TEAM_ID | TEAM   |   GP |   MIN |   FGM |   FGA |   FG_PCT |   FG3M |   FG3A |   FG3_PCT |   FTM |   FTA |   FT_PCT |   OREB |   DREB |   REB |   AST |   STL |   BLK |   TOV |   PTS |   EFF |
+|:--------|:-----------------|------------:|-------:|:----------------|-----------:|:-------|-----:|------:|------:|------:|---------:|-------:|-------:|----------:|------:|------:|---------:|-------:|-------:|------:|------:|------:|------:|------:|------:|------:|
+| 2012-13 | Regular%20Season |        2546 |      1 | Carmelo Anthony | 1610612752 | NYK    |   67 |  37   |  10   |  22.2 |    0.449 |    2.3 |    6.2 |     0.379 |   6.3 |   7.6 |    0.83  |    2   |    4.9 |   6.9 |   2.6 |   0.8 |   0.5 |   2.6 |  28.7 |  23.2 |
+| 2012-13 | Regular%20Season |      201142 |      2 | Kevin Durant    | 1610612760 | OKC    |   81 |  38.5 |   9   |  17.7 |    0.51  |    1.7 |    4.1 |     0.416 |   8.4 |   9.3 |    0.905 |    0.6 |    7.3 |   7.9 |   4.6 |   1.4 |   1.3 |   3.5 |  28.1 |  30.4 |
+| 2012-13 | Regular%20Season |         977 |      3 | Kobe Bryant     | 1610612747 | LAL    |   78 |  38.6 |   9.5 |  20.4 |    0.463 |    1.7 |    5.2 |     0.324 |   6.7 |   8   |    0.839 |    0.8 |    4.7 |   5.6 |   6   |   1.4 |   0.3 |   3.7 |  27.3 |  24.6 |
+| 2012-13 | Regular%20Season |        2544 |      4 | LeBron James    | 1610612748 | MIA    |   76 |  37.9 |  10.1 |  17.8 |    0.565 |    1.4 |    3.3 |     0.406 |   5.3 |   7   |    0.753 |    1.3 |    6.8 |   8   |   7.3 |   1.7 |   0.9 |   3   |  26.8 |  32.2 |
+| 2012-13 | Regular%20Season |      201935 |      5 | James Harden    | 1610612745 | HOU    |   78 |  38.3 |   7.5 |  17.1 |    0.438 |    2.3 |    6.2 |     0.368 |   8.6 |  10.2 |    0.851 |    0.8 |    4.1 |   4.9 |   5.8 |   1.8 |   0.5 |   3.8 |  25.9 |  24   |
+
+- `salaries` : this dataframe contains information of each player's salary from the season 2012-13 to now. This is a preview of the dataframe: 
+
+| PLAYER            | Salary      | Year    |
+|:------------------|:------------|:--------|
+| Kobe Bryant       | $30,453,805 | 2012-13 |
+| Dirk Nowitzki     | $20,907,128 | 2012-13 |
+| Amar'e Stoudemire | $19,948,799 | 2012-13 |
+| Joe Johnson       | $19,752,645 | 2012-13 |
+| Carmelo Anthony   | $19,444,503 | 2012-13 |
 
 ## Data Exploration
 - we merge together the `players_stats` and `salaries` data frames together to let each player gets their corresponding salary in each season.
