@@ -48,15 +48,15 @@ add heads of datasets later on.
 
 ## Justification on model selection
 Here are some graphs representing some variables' relationships with `Salary`:
-1. PTS(points) vs. Salary:
+- PTS(points) vs. Salary:
 
 <iframe src="assets/PTS_vs_Salary.html" width=800 height=600 frameBorder=0></iframe>
 
-2. REB(rebounds) vs. Salary:
+- REB(rebounds) vs. Salary:
 
 <iframe src="assets/REB_vs_Salary.html" width=800 height=600 frameBorder=0></iframe>
 
-3. AST(assists) vs. Salary:
+- AST(assists) vs. Salary:
 
 <iframe src="assets/AST_vs_Salary.html" width=800 height=600 frameBorder=0></iframe>
 
