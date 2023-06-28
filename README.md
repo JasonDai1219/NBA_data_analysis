@@ -28,7 +28,8 @@
 ## Data Exploration
 - we merge together the `players_stats` and `salaries` data frames together to let each player gets their corresponding salary in each season.
 - As we do not have missing data in these datasets, so we do not need to work on data cleaning part that much, and we only need to make the salary variable in string format through `merged['Salary'] = merged['Salary'].str.strip('$').str.replace(',', '').astype('float')`.
-- To also adjust the problem of inflation, we searched about the `cumulative inflation rate` from each season in our dataset to now, and adjusted each player's salaries accordingly. 
+- To also adjust the problem of inflation, we searched about the `cumulative inflation rate` from each season in our dataset to now, and adjusted each player's salaries accordingly.
+- After all, we take the mean of all players' data across all these seasons to make the result more informativr, and the result could potentially `tell a NBA player how much income he is going to make each season approximately`.
 
 add dataframes and graphs later on.
 
