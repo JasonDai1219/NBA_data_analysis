@@ -67,3 +67,12 @@ Here are some graphs representing some variables' relationships with `Salary`:
 - **Best Hyperparameter** : After using `cross validation`, we realized that **degree 1** is the most optimal degree to use in our model.
 - **Overall Model** : In this model, we decided to make a within-group standardization, so that it makes NBA player's salaries more comparable across times, also due to the fact that a player's salary has many other factors which are subjective and hard to quantify, so our model's prediction will not give an **exact** estimation of a player's salary. Instead, we would predict the **z-score** to let the player use a specific season's **mean** and **standard deviation** to get a rough estimation on their salaries or for team managers to know how much the player worth.
 - **Model performance** : the `RMSE(Root Mean Squared Error)` of our model is around $3,316,357, which may seems huge, however, we know that there are variables that are not able to quantify, so this model's result mainly serves as a reference for managers and players, so this range of RMSE is understandable.
+
+## Fairness analysis
+- In people's mind, teams in the West conference seems to be more powerful than teams in the East conference, thus, we would like to see how does our model perform on these groups, and whether bias occur among these two groups.
+- Null Hypothesis : Our model is fair. Its rmse on NBA player who playsd in the **West Conference** and who plays in the **East Conference** are roughly the same, and any differences are due to random chance.
+- Alternative Hypothesis : Our model is unfair. Its rmse on salaries of NBA players who play in the **West Conference** is greater than that of NBA players who play in the **East Conference**.
+- Test statistic : the roost mean square error of these two groups.
+- Significance level : 0.05.
+- P-value: 0.43
+- Conclusion : Since the p-value > 0.05, hence we fail to reject the null hypothesis and probably the `rmse` of predictions on NBA players who play in the **West conference**'s salary is not significantly greater than that of NBA players who play in the **East conference** in our analysis.
