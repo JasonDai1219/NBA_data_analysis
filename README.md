@@ -64,6 +64,6 @@ Here are some graphs representing some variables' relationships with `Salary`:
 
 ## Model creation
 - **Getting rid of unuseful variables** : we need to drop all IDs, since they are not relevant in our analysis, and could bring potential noise to the model. We are also dropping all attempted counts and made counts on shootings, as the percentage variable is a good enough representation of those two variable; the same reason applies to REB and OREb, DREB, and EFF. Therefore, we want to avoid `Multicolinearity` through dropping REB variable also.
-- **Best Hyperparameter** : After using `cross validation`, we realized that degree x is the most optimal degree to use in our model.
-- **Overall Model** : 
-- **Model performance** : 
+- **Best Hyperparameter** : After using `cross validation`, we realized that **degree 1** is the most optimal degree to use in our model.
+- **Overall Model** : In this model, we decided to make a within-group standardization, so that it makes NBA player's salaries more comparable across times, also due to the fact that a player's salary has many other factors which are subjective and hard to quantify, so our model's prediction will not give an **exact** estimation of a player's salary. Instead, we would predict the **z-score** to let the player use a specific season's **mean** and **standard deviation** to get a rough estimation on their salaries or for team managers to know how much the player worth.
+- **Model performance** : the `RMSE(Root Mean Squared Error)` of our model is around $3,316,357, which may seems huge, however, we know that there are variables that are not able to quantify, so this model's result mainly serves as a reference for managers and players, so this range of RMSE is understandable.
