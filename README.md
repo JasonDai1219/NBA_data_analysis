@@ -70,9 +70,16 @@ Here are some graphs representing some variables' relationships with `Salary`:
 
 ## Fairness analysis
 - In people's mind, teams in the West conference seems to be more powerful than teams in the East conference, thus, we would like to see how does our model perform on these groups, and whether bias occur among these two groups.
-- Null Hypothesis : Our model is fair. Its rmse on NBA player who playsd in the **West Conference** and who plays in the **East Conference** are roughly the same, and any differences are due to random chance.
-- Alternative Hypothesis : Our model is unfair. Its rmse on salaries of NBA players who play in the **West Conference** is greater than that of NBA players who play in the **East Conference**.
-- Test statistic : the roost mean square error of these two groups.
-- Significance level : 0.05.
-- P-value: 0.43
-- Conclusion : Since the p-value > 0.05, hence we fail to reject the null hypothesis and probably the `rmse` of predictions on NBA players who play in the **West conference**'s salary is not significantly greater than that of NBA players who play in the **East conference** in our analysis.
+- **Group X** : 
+> NBA players who play in the West conference.
+- **Group Y** : 
+> NBA players who play in the East conference.
+- **Null Hypothesis** : 
+> Our model is fair. Its rmse on NBA player who playsd in the **West Conference** and who plays in the **East Conference** are roughly the same, and any differences are due to random chance.
+- **Alternative Hypothesis** : 
+> Our model is unfair. Its rmse on salaries of NBA players who play in the **West Conference** is greater than that of NBA players who play in the **East Conference**.
+- **Test statistic** : the roost mean square error of these two groups.
+- **Significance level** : 0.05.
+- **P-value** : 0.43
+- **Conclusion** : 
+> Since the p-value > 0.05, hence we fail to reject the null hypothesis and probably the `rmse` of predictions on NBA players who play in the **West conference**'s salary is not significantly greater than that of NBA players who play in the **East conference** in our analysis.
